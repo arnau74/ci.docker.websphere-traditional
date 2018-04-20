@@ -8,6 +8,7 @@ When the container is started by using the IBM WebSphere Application Server Base
 * `HOST_NAME` (optional, default is `localhost`)
 * `SERVER_NAME` (optional, default is `server1`)
 * `ADMIN_USER_NAME` (optional, default is `wsadmin`)
+* `STARTING_PORT` (optional, default is `9080`)
 
 # Running the image by using the default values (starting port 9080)
 
