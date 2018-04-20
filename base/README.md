@@ -7,7 +7,7 @@ The following instructions can be used to build an IBM WebSphere Application Ser
 * IBM Installation Manager binaries from [Passport Advantage](http://www-01.ibm.com/software/passportadvantage/pao_customer.html)
 
   IBM Installation Manager binaries:
-  * Install_Mgr_v1.6.2_Lnx_WASv8.5.5.zip (CIK2GML)
+  * agent.installer.lnx.gtk.x86_64_1.8.5.zip (CND0ZML)
 
 * IBM WebSphere Application Server Base traditional binaries from [Passport Advantage](http://www-01.ibm.com/software/passportadvantage/pao_customer.html) / [Fix Central](http://www-933.ibm.com/support/fixcentral/)
 
@@ -16,10 +16,11 @@ The following instructions can be used to build an IBM WebSphere Application Ser
   * WAS_V8.5.5_2_OF_3.zip (CIK1RML)
   * WAS_V8.5.5_3_OF_3.zip (CIK1SML)
 
-  Fixpack V8.5.5.10 binaries:
-  * 8.5.5-WS-WAS-FP0000010-part1.zip
-  * 8.5.5-WS-WAS-FP0000010-part2.zip
-
+  Fixpack V8.5.5.13 binaries:
+  * 8.5.5-WS-WAS-FP03-part1.zip
+  * 8.5.5-WS-WAS-FP03-part2.zip
+  * 8.5.5-WS-WAS-FP03-part2.zip
+  
   IBM WebSphere SDK Java Technology Edition V8.0.2.10 binaries:
   * 8.0.2.10-WS-IBMWASJAVA-Linux.zip
 
@@ -88,6 +89,7 @@ The following instructions can be used to build an IBM WebSphere Application Ser
       --build-arg NODE_NAME=<node-name> --build-arg PROFILE_NAME=<profile-name> \
       --build-arg HOST_NAME=<host-name> --build-arg SERVER_NAME=<server-name> \
       --build-arg ADMIN_USER_NAME=<admin-user-name> \
+      --build-arg STARTING_PORT=<starting-port> \
       -t websphere-traditional:profile -f Dockerfile.profile .
     ```
 
