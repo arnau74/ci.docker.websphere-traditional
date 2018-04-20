@@ -17,9 +17,9 @@ The following instructions can be used to build an IBM WebSphere Application Ser
   * WAS_V8.5.5_3_OF_3.zip (CIK1SML)
 
   Fixpack V8.5.5.13 binaries:
-  * 8.5.5-WS-WAS-FP03-part1.zip
-  * 8.5.5-WS-WAS-FP03-part2.zip
-  * 8.5.5-WS-WAS-FP03-part2.zip
+  * 8.5.5-WS-WAS-FP013-part1.zip
+  * 8.5.5-WS-WAS-FP013-part2.zip
+  * 8.5.5-WS-WAS-FP013-part2.zip
   
   IBM WebSphere SDK Java Technology Edition V8.0.2.10 binaries:
   * 8.0.2.10-WS-IBMWASJAVA-Linux.zip
