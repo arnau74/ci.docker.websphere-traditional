@@ -35,6 +35,6 @@ USER $USER
 
 ADD was.tar /
 
-ENV PATH /opt/IBM/WebSphere/AppServer/bin:$PATH
+ENV PATH /work/app/IBM/WebSphere/AppServer/bin:$PATH
 
 CMD ["/work/create_and_start"]

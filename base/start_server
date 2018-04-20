@@ -19,7 +19,7 @@ update_hostname()
 start_server()
 {
   echo "Starting server ..................."
-  /opt/IBM/WebSphere/AppServer/profiles/$PROFILE_NAME/bin/startServer.sh $SERVER_NAME
+  /work/app/IBM/WebSphere/AppServer/profiles/$PROFILE_NAME/bin/startServer.sh $SERVER_NAME
 }
 
 stop_server()
@@ -39,8 +39,8 @@ fi
 trap "stop_server" TERM INT
 start_server || exit $?
 PID=$(ps -C java -o pid= | tr -d " ")
-tail -F /opt/IBM/WebSphere/AppServer/profiles/$PROFILE_NAME/logs/$SERVER_NAME/SystemOut.log --pid $PID -n +0 &
-tail -F /opt/IBM/WebSphere/AppServer/profiles/$PROFILE_NAME/logs/$SERVER_NAME/SystemErr.log --pid $PID -n +0 >&2 &
+tail -F /work/app/IBM/WebSphere/AppServer/profiles/$PROFILE_NAME/logs/$SERVER_NAME/SystemOut.log --pid $PID -n +0 &
+tail -F /work/app/IBM/WebSphere/AppServer/profiles/$PROFILE_NAME/logs/$SERVER_NAME/SystemErr.log --pid $PID -n +0 >&2 &
 while [ -e "/proc/$PID" ]; do
   sleep 1
 done
