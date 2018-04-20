@@ -23,13 +23,13 @@ docker run --name test -h test -p 9080:9080 -p 9081:9081 -p 9082:9082 -p 9083:90
 # Running the image by passing values for the environment variables
 
 ```bash
-docker run --name <container-name> -h <container-name> -e UPDATE_HOSTNAME=true -e PROFILE_NAME=<profile-name> -e NODE_NAME=<node-name> -e SERVER_NAME=<server-name> -p 9080:9080 -p 9081:9081 -p 9082:9082 -p 9083:9083 -d <profile-image-name>
+docker run --name <container-name> -h <container-name> -e UPDATE_HOSTNAME=true -e PROFILE_NAME=<profile-name> -e NODE_NAME=<node-name> -e SERVER_NAME=<server-name> -e STARTING_PORT=<starting-port> -p <starting-port+1:starting-port+1> -p <starting-port+2:starting-port+2> -p <starting-port+3:starting-port+3> -d <profile-image-name>
 ```    
 
 Example:
 
 ```bash
-docker run --name test -h test -e UPDATE_HOSTNAME=true -e PROFILE_NAME=AppSrv02 -e NODE_NAME=DefaultNode02 -e SERVER_NAME=server2 -p 9043:9043 -p 9443:9443 -d baseprofile 
+docker run --name test -h test -e UPDATE_HOSTNAME=true -e PROFILE_NAME=AppSrv02 -e NODE_NAME=DefaultNode02 -e SERVER_NAME=server2 -e SERVER_NAME=10080 -p 10080:10080 -p 10081:10081 -p 10082:10082 -p 10083:10083 -d baseprofile 
 ``` 
 
 # Checking the logs
