@@ -93,7 +93,18 @@ The following instructions can be used to build an IBM WebSphere Application Ser
       -t websphere-traditional:profile -f Dockerfile.profile .
     ```
 
-    This creates a profile in the image so that the servers starts immediately when the image is run. The build arguments are all optional and the default values can be found in [Dockerfile.profile](Dockerfile.profile).
+
+9. Optionally, build an image with application deployed (starting from previous image) 
+
+    place your files under ear folder
+    build the image
+
+    ```bash
+    docker build -t websphere-traditional:deploy -d Dockerfile.deploy .
+    ```
+
+    in the build section is yet missing the configuration of all parameters need for application (data source etc.) WIP
+
 
 ## Running the images
 
